@@ -1,0 +1,15 @@
+[Unit]
+Description = Compliance Central Service
+After=network.target
+
+[Service]
+Type = forking
+ExecStart = /bin/bash /usr/local/bin/Java_Spring.sh start
+ExecStop = /bin/bash /usr/local/bin/Java_Spring.sh stop
+ExecReload = /bin/bash /usr/local/bin/Java_Spring.sh reload
+
+[Install]
+WantedBy=multi-user.target
+
+
+
